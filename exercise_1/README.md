@@ -3,7 +3,7 @@ Các bạn hãy làm theo các chỉ dẫn sau đây. Như thường lệ, hãy 
 # 1. Tải repo hiện tại về máy
 - Từ terminal, dùng lệnh `git clone https://github.com/masspvn/git_test.git` để tải repo này về máy. Đường dẫn "https://github.com/masspvn/git_test.git" có thể được tìm thấy ở trang chủ của repo
 
-![clone URL](https://github.com/masspvn/git_test.git)
+![clone URL](../images/clone_url.png)
 - Xem lịch sử của repo trên máy tính với lệnh `git log`
 - Chọn một file bất kì, dùng lệnh `git blame tên_file` để thấy tác giả và thời điểm thay đổi của từng dòng code trong file
 - Dùng lệnh `git status` để thấy trạng thái của repo trên máy
@@ -26,7 +26,7 @@ Bước này đòi hỏi các bạn có quyền collaborator trong repo này. H�
 
 Các bạn hãy nhớ lại từ bài giảng, sau bước trên, thay đổi của bạn chưa được nhập vào master mà vẫn ở một nhánh riêng biệt. Để nhập 2 nhánh này lại, các bạn nên tạo một `pull request`, cơ bản là để có ít nhất một thành viên khác xem những thay đổi của bạn có phù hợp không. Khi thành viên đó chấp nhận yêu cầu được nhập vào master của bạn, bạn mới nên nhập thay đổi vào master.
 - Từ trang https://github.com/masspvn/git_test, nhấn vào tab "??? branches" ở giữa "??? commits" và "??? releases". Tại đây bạn sẽ thấy nhánh `exercise_1_TênCủaBạn_branch`. Hãy nhấn vào nút "New pull request", và điền thông tin tóm tắt lại những thay đổi của bạn trong nhánh này. Nhấn "Create pull request" sau khi hoàn thành
-- Sau khi request này được "review", bạn sẽ nhận được email thông báo hoặc notification trên trang Github. Lúc này bạn có thể nhấn nút "Merge pull request" để nhập những thay đổi trong nhánh này vào master
+- Bạn nên đợi có người "review" thay đổi của bạn trước khi nhập thay đổi vào master. Bạn sẽ nhận được email thông báo hoặc notification trên trang Github khi có người chấp nhận thay đổi này. Lúc này, từ trang pull request, bạn có thể nhấn nút "Merge pull request" rồi "Confirm merge" để chính thức nhập những thay đổi trong nhánh này vào master
 - Quay trở lại terminal trên máy tính. Dùng lệnh `git checkout master` để quay lại nhánh master. Dùng lệnh `git status` để chắc chắn rằng không có thay đổi nào chưa được commit tại đây
 - Dùng lệnh `git pull` để tải những thay đổi mới về máy của bạn. Lúc này, lệnh `git log` chắc chắn sẽ cho thấy commit của bạn
 
