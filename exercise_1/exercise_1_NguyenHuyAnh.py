@@ -28,27 +28,19 @@ for month in monthly_weather:
     print(month)
     
 # Checkpoint 2: Dùng for loop, với mỗi row trong monthly_weather, in ra các keys của row
-maxx = -1
-id_maxx = 0
-mon = 0
-monthly_weather2 = monthly_weather
-for month in monthly_weather2:
-    tmp2 = -1
-    while(len(month)!=0):
-        tmp = month.popitem(last = False)
-        print(tmp[1],end =  ' ')
-        if(tmp[0]=='month'):
-            tmp2 = tmp[1]
-        if(tmp[0]=='rainy_days')and(int(tmp[1])>maxx):
-         maxx = int(tmp[1])
-         id_maxx = tmp2      
-    print('\n')
+max_rainy_days = -1
+cur_month = -1
+for month in monthly_weather:
+    print(month.keys())
+    if(int(month['rainy_days']) > max_rainy_days):
+        cur_month = int(month['month'])
+        max_rainy_days = int(month['rainy_days'])
         
 # TODO
 
 # Checkpoint 3: Tìm tháng có số ngày mưa (rainy days) lớn nhất trong năm.
 	# Các bạn chú ý đối chiếu lại với dữ liệu trong file csv ban đầu. Nếu cần, hàm int(string) sẽ giúp
 # lấy giá trị số của một xâu.
-print(id_maxx)
+print(cur_month)
 # TODO
 
