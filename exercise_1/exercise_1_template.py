@@ -17,7 +17,9 @@ with open('Hanoi.csv', 'r') as f:
         monthly_weather.append(row)
 
 # Checkpoint 1: Hãy in monthly_weather ra và nhận xét về loại dữ liệu của các thành phần bên trong.
-# (Tham khảo qua https://docs.python.org/3/library/collections.html#collections.OrderedDict).
+# (Tham khảo qua định nghĩa của OrderedDict tại 
+# https://docs.python.org/3/library/collections.html#collections.OrderedDict. Do OrderedDict cũng
+# thuộc class Dict, mọi hàm của Dict đều có thể dùng được cho OrderDict.
 # TODO
 
 
