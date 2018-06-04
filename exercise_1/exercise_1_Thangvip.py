@@ -17,32 +17,30 @@ with open('Hanoi.csv', 'r') as f:
         monthly_weather.append(row)
 
 # Checkpoint 1: Hãy in monthly_weather ra và nhận xét về loại dữ liệu của các thành phần bên trong.
-# (Tham khảo qua https://docs.python.org/3/library/collections.html#collections.OrderedDict).
+# (Tham khảo qua định nghĩa của OrderedDict tại 
+# https://docs.python.org/3/library/collections.html#collections.OrderedDict. Do OrderedDict cũng
+# thuộc class Dict, mọi hàm của Dict đều có thể dùng được cho OrderDict.
 # TODO
-
 print(monthly_weather)
-# Dữ liệu là list các phân lớp dict gồm các feature theo thứ tự month, min_temperature, max_temperature, rain_fall, rain_days
 
 # Dùng for loop, ta có thể in ra từng row trong monthly_weather. (Hãy uncomment những dòng sau)
 for month in monthly_weather:
-    print(month)
+   print(month)
+
+
     
 # Checkpoint 2: Dùng for loop, với mỗi row trong monthly_weather, in ra các keys của row
-max_rainy_days = -1
-cur_month = -1
+# TODO
 for month in monthly_weather:
-    print(month.keys())
-    if(int(month['rainy_days']) > max_rainy_days):
-        cur_month = int(month['month'])
-        max_rainy_days = int(month['rainy_days'])
-        
+    for i in month:
+        print(i)
+# Checkpoint 3: Tìm tháng có số ngày mưa (rainy days) lớn nhất trong năm.
+m=0
+for month in monthly_weather:
+    if (int(month["rainy_days"])> m):
+        m = int(month["rainy_days"])
+print(m)
+# Các bạn chú ý đối chiếu lại với dữ liệu trong file csv ban đầu. Nếu cần, hàm int(string) sẽ giúp
+# lấy giá trị số của một xâu.
 # TODO
 
-# Checkpoint 3: Tìm tháng có số ngày mưa (rainy days) lớn nhất trong năm.
-	# Các bạn chú ý đối chiếu lại với dữ liệu trong file csv ban đầu. Nếu cần, hàm int(string) sẽ giúp
-# lấy giá trị số của một xâu.
-print(cur_month)
-# TODO
-for i in monthly_weather:
-    print(i)
-    
