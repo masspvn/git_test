@@ -35,7 +35,8 @@ print(monthly_weather[0].keys())
 # Các bạn chú ý đối chiếu lại với dữ liệu trong file csv ban đầu. Nếu cần, hàm int(string) sẽ giúp
 # lấy giá trị số của một xâu.
 # TODO
-Max_rainydays_month = monthly_weather[0]
+max_rainydays_month = monthly_weather[0]
 for month in monthly_weather:
-    if(int(Max_rainydays_month['rainy_days']) < int(month['rainy_days'])): Max_rainydays_month = month 
-print(Max_rainydays_month['month'])
+    if(int(max_rainydays_month['rainy_days']) < int(month['rainy_days'])): 
+        max_rainydays_month = month 
+print(max_rainydays_month['month'])
