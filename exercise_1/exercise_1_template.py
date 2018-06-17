@@ -36,4 +36,3 @@ with open('Hanoi.csv', 'r') as f:
 # Các bạn chú ý đối chiếu lại với dữ liệu trong file csv ban đầu. Nếu cần, hàm int(string) sẽ giúp
 # lấy giá trị số của một xâu.
 # TODO
-
