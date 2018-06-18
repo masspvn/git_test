@@ -22,17 +22,33 @@ with open('Hanoi.csv', 'r') as f:
 # thuộc class Dict, mọi hàm của Dict đều có thể dùng được cho OrderDict.
 # TODO
 
+# print(monthly_weather)
+# loại dữ liệu bên trong là OrderedDict
 
 # Dùng for loop, ta có thể in ra từng row trong monthly_weather. (Hãy uncomment những dòng sau)
-#for month in monthly_weather:
+# for month in monthly_weather:
 #    print(month)
-
-
     
 # Checkpoint 2: Dùng for loop, với mỗi row trong monthly_weather, in ra các keys của row
 # TODO
+
+for month in monthly_weather:
+    print(list(month.keys()))
+# in ra keys của row
+    
+for month in monthly_weather:
+    print(list(month.values()))
+# in ra values của row
 
 # Checkpoint 3: Tìm tháng có số ngày mưa (rainy days) lớn nhất trong năm.
 # Các bạn chú ý đối chiếu lại với dữ liệu trong file csv ban đầu. Nếu cần, hàm int(string) sẽ giúp
 # lấy giá trị số của một xâu.
 # TODO
+
+max_rainydays = monthly_weather[0]
+
+for month in monthly_weather:
+    if int(max_rainydays['rainy_days']) < int(month['rainy_days']):
+        max_rainydays = month
+        
+print(max_rainydays['month'])
